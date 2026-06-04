@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-RDKK Gondang - Pencetak Dokumen Formulir Otomatis</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>🖨️ e-RDKK Gondang</h1>
+      <p>Pencetak Dokumen Formulir Otomatis dari Template Excel</p>
+    </header>
+
+    <main class="main-content">
+      <section class="upload-section">
+        <h2>📤 Upload File Excel</h2>
+        <div class="upload-area" id="uploadArea">
+          <input type="file" id="excelInput" accept=".xlsx,.xls" style="display:none">
+          <p>Drag & drop file Excel atau <strong>klik di sini</strong> untuk upload</p>
+          <small>File Excel dengan kolom merah = field wajib diisi</small>
+        </div>
+        <button id="uploadBtn" class="btn btn-primary">Upload Excel</button>
+      </section>
+
+      <section class="form-section" id="formSection" style="display:none;">
+        <h2>📝 Form Data</h2>
+        <form id="dataForm">
+          <div id="formFields"></div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-success">✓ Submit & Generate Dokumen</button>
+            <button type="reset" class="btn btn-secondary">↻ Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="download-section" id="downloadSection" style="display:none;">
+        <h2>📥 Download Dokumen</h2>
+        <div class="download-options">
+          <div class="option">
+            <input type="radio" name="format" value="docx" id="formatDocx" checked>
+            <label for="formatDocx">📄 Microsoft Word (.docx)</label>
+          </div>
+          <div class="option">
+            <input type="radio" name="format" value="pdf" id="formatPdf">
+            <label for="formatPdf">📋 PDF Document (.pdf)</label>
+          </div>
+        </div>
+
+        <div class="pages-option">
+          <label>
+            <input type="radio" name="pages" value="all" checked> Cetak Semua Halaman
+          </label>
+          <label>
+            <input type="radio" name="pages" value="range"> Halaman Tertentu
+          </label>
+          <div id="pageRangeInput" style="display:none;">
+            <input type="number" id="pageStart" placeholder="Halaman dari" min="1">
+            <span> - </span>
+            <input type="number" id="pageEnd" placeholder="sampai" min="1">
+          </div>
+        </div>
+
+        <button id="downloadBtn" class="btn btn-success">⬇️ Download Dokumen</button>
+      </section>
+
+      <div id="message" class="message" style="display:none;"></div>
+    </main>
+
+    <footer class="footer">
+      <p>e-RDKK Gondang v1.0.0 | © 2024</p>
+    </footer>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

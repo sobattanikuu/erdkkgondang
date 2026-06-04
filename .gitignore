@@ -1,0 +1,14 @@
+node_modules/
+.env
+.DS_Store
+uploads/
+downloads/
+*.log
+.vscode/
+.idea/
+dist/
+build/
+templates/excel/*
+templates/word/*
+!templates/excel/.gitkeep
+!templates/word/.gitkeep
