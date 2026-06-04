@@ -2,16 +2,30 @@
 
 Aplikasi Pencetak Dokumen Formulir Otomatis dari Template Excel
 
-## Fitur Utama
-- ✅ Upload Excel template (identifikasi kolom merah sebagai wajib diisi)
-- ✅ Baca data dan validasi field mandatory
-- ✅ Generate dokumen Word dengan template yang sama persis
-- ✅ Export ke PDF atau Word
-- ✅ Menu download dengan opsi rentang halaman atau cetak semua
-- ✅ Replace "RDKK" → "e-RDKK" otomatis
-- ✅ Formulir 1 halaman
+## 🌐 Live Demo
 
-## Setup
+**URL:** https://erdkk-gondang.vercel.app
+
+Bisa diakses langsung dari web browser, tidak perlu install!
+
+---
+
+## ✨ Fitur Utama
+
+- ✅ Upload Excel template
+- ✅ Identifikasi kolom merah (wajib diisi)
+- ✅ Auto generate form dari Excel
+- ✅ Validasi field mandatory
+- ✅ Generate dokumen Word
+- ✅ Export ke Word/PDF
+- ✅ Download dengan opsi halaman
+- ✅ Replace "RDKK" → "e-RDKK" otomatis
+- ✅ UI modern & responsive
+- ✅ Real-time validation
+
+---
+
+## 🚀 Quick Start (Local)
 
 ### 1. Clone Repository
 ```bash
@@ -24,33 +38,80 @@ cd erdkkgondang
 npm install
 ```
 
-### 3. Setup Template Files
-- Letakkan file Excel template di `templates/excel/`
-- Letakkan file Word template di `templates/word/`
-
-### 4. Run Server
+### 3. Run Development Server
 ```bash
 npm run dev
 ```
 
 Aplikasi akan berjalan di `http://localhost:3000`
 
-## Struktur Project
+---
+
+## 📁 Struktur Project
+
 ```
 erdkkgondang/
-├── server.js
-├── config/
-├── controllers/
-├── utils/
-├── routes/
-├── views/
-├── public/
-│   ├── css/
-│   └── js/
-└── templates/
-    ├── excel/
-    └── word/
+├── server.js                 # Main server
+├── package.json
+├── vercel.json              # Deployment config
+├── README.md
+├── routes/api.js            # API routes
+├── controllers/              # Request handlers
+├── utils/                   # Utility functions
+├── views/index.html         # Frontend
+├── public/                  # Static assets
+│   ├── css/style.css
+│   └── js/app.js
+└── templates/               # Templates
 ```
 
-## License
-MIT
+---
+
+## 🌐 Akses Online
+
+Tidak perlu setup lokal! Langsung buka:
+
+👉 **https://erdkk-gondang.vercel.app**
+
+---
+
+## 🔧 API Endpoints
+
+- `POST /api/upload-excel` - Upload file Excel
+- `GET /api/form-fields` - Ambil field dari Excel
+- `POST /api/submit-form` - Submit form data
+- `POST /api/generate-document` - Generate dokumen
+- `GET /api/download/:filename` - Download file
+
+---
+
+## 📊 Technology Stack
+
+**Backend:**
+- Node.js + Express.js
+- ExcelJS
+- Docx
+- Axios
+
+**Frontend:**
+- HTML5 + CSS3
+- Vanilla JavaScript
+- Responsive Design
+
+---
+
+## 📝 Cara Menggunakan
+
+1. **Upload Excel** → Drag & drop atau klik upload
+2. **Isi Form** → Form auto-generate dari Excel
+3. **Download** → Pilih format Word atau PDF
+
+---
+
+## 📄 License
+
+MIT - Free to use
+
+---
+
+**Akses aplikasi sekarang:** 👉 https://erdkk-gondang.vercel.app ✨

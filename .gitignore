@@ -1,8 +1,9 @@
 node_modules/
 .env
+.env.local
 .DS_Store
-uploads/
-downloads/
+uploads/*
+downloads/*
 *.log
 .vscode/
 .idea/
@@ -12,3 +13,5 @@ templates/excel/*
 templates/word/*
 !templates/excel/.gitkeep
 !templates/word/.gitkeep
+weather-dashboard/node_modules/
+weather-dashboard/.env.local
